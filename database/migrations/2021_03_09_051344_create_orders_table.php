@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->integer('taxes')->default(21);
             $table->enum('status',[1,2] )->default(1);
-            $table->string('comment');
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }

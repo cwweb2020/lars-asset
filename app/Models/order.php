@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class order extends Model
 {
-    protected $guarded=[];
+    protected $fillable = [ 'taxes', 'status', 'comment']; 
+   // protected $guarded=[];
     use HasFactory;
 
 //   RELACION MUCHOS A MUCHOS

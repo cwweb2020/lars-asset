@@ -13,7 +13,7 @@ class OrderFactory extends Factory
      * @var string
      */
     protected $model = order::class;
-
+ 
     /**
      * Define the model's default state.
      *
@@ -22,9 +22,9 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            // 'name' =>$this->faker->sentence(1),
-            // 'price' =>$this->faker->numberBetween(100, 200),
-            // 'description' =>$this->faker->paragraph()
+            'taxes' =>21,
+            'status' =>$this->faker->numberBetween(1, 2),
+            'comment' =>$this->faker->paragraph()
         ];
     }
 }

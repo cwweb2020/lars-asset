@@ -24,20 +24,9 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request){
+    public function create(){
 
-        // $item = new order();
-   
-        // $item->titulo = $request->titulo;
-        // $item->foto = $request->foto;
-        // $item->foto1 = $request->foto1;
-        // $item->foto2 = $request->foto2;
-        // $item->precio = $request->precio;
-        // $item->descL = $request->descL;
-        // $item->descS = $request->descS;
-   
-        // $item->save();
-        // return redirect()->route('order.index');
+        return view('order.create');
       
     }
 
@@ -49,7 +38,19 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $taxes= request('taxes');
+        $status= request('status');
+        $comment= request('comment');
+
+        order::create([
+            'taxes'=> $taxes,
+            'status'=> $status,
+            'comment'=> $comment
+        ]);
+
+      // order::create()->all();
+
+         return redirect()->route('order.index');
     }
 
     /**
