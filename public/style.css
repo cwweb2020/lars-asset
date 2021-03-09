@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.formdata {
+  background-color: rgba(211, 211, 211, 0.226);
+  width: 25rem;
+  padding: 3rem 2rem;
+  min-height: 30rem;
+  border-radius: 10px;
+}
+
+.formdata input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: .5rem 0;
+}
+
+.formdata textarea {
+  width: 100%;
+  height: 80%;
+  border: none;
+  padding: 5px;
+  margin-top: 12px;
+}
+
+.formdata button {
+  margin-top: 15px;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */

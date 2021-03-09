@@ -5,7 +5,7 @@
 
   
  <section class="container p-4 m-4">
-    <form action="{{url('/order')}}" method="POST" class="form form-control">
+    <form action="{{url('/order')}}" method="POST" class="formdata">
    
         @csrf    
          <h3>Ingresar Orden</h3>

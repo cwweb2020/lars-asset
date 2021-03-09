@@ -95,6 +95,8 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        order::destroy($id);
+        
+        return redirect()->route('order.index');
     }
 }
