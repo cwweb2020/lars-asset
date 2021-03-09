@@ -13,9 +13,9 @@ class OrderController extends Controller
      */
     public function index()
     {   
-        $orders=order::all();
+        $orders=order::with('products')->get();
 
-       // return dd($orders);
+        // return dd($orders);
         return view('order.index', compact('orders'));
     }
 
@@ -24,9 +24,21 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create(Request $request){
+
+        // $item = new order();
+   
+        // $item->titulo = $request->titulo;
+        // $item->foto = $request->foto;
+        // $item->foto1 = $request->foto1;
+        // $item->foto2 = $request->foto2;
+        // $item->precio = $request->precio;
+        // $item->descL = $request->descL;
+        // $item->descS = $request->descS;
+   
+        // $item->save();
+        // return redirect()->route('order.index');
+      
     }
 
     /**

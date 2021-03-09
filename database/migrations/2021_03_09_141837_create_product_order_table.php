@@ -13,7 +13,7 @@ class CreateProductOrderTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_order', function (Blueprint $table) {
+        Schema::create('order_product', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('product_id');
@@ -21,6 +21,8 @@ class CreateProductOrderTable extends Migration
 
             // restriccion de llave foranea
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
 
             $table->timestamps();
         });

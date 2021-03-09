@@ -22,7 +22,9 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            //
+            // 'name' =>$this->faker->sentence(1),
+            // 'price' =>$this->faker->numberBetween(100, 200),
+            // 'description' =>$this->faker->paragraph()
         ];
     }
 }
