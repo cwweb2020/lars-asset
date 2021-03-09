@@ -27,4 +27,6 @@ class ProductFactory extends Factory
             'description' =>$this->faker->paragraph()
         ];
     }
+   
+
 }

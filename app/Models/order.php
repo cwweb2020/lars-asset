@@ -9,4 +9,9 @@ class order extends Model
 {
     protected $guarded=[];
     use HasFactory;
+
+//   RELACION MUCHOS A MUCHOS
+    public function products(){
+        return $this->belongsToMany(product::class);
+    }
 }
