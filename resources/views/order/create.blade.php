@@ -3,9 +3,17 @@
 
 @section('content')
 
-  
+     <div class="container">
+         <h2 class="text-center my-4 py-4">
+             Ingrese una nueva Orden
+         </h2>
+     </div>
+     <div class="_back">
+         <a class="btn btn-dark" href="{{route('order.index')}}">Volver</a>
+        
+     </div>
  <section class="container p-4 m-4">
-    <form action="{{url('/order')}}" method="POST" class="formdata">
+    <form action="{{url('/order')}}" method="POST" class="formdata ms-4">
    
         @csrf    
          <h3>Ingresar Orden</h3>

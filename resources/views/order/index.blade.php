@@ -6,7 +6,7 @@
   
  <section class="listadototal container p-4">
      <div class="listadowraper row p-4">
-         <h2>Listado de Ordenes</h2> <a href="{{route('order.create')}}" class="btn btn-dark col-4 py-2 mt-3"> Ingresar Orden</a><
+         <h2>Listado de Ordenes</h2> <a href="{{route('order.create')}}" class="btn btn-dark col-4 py-2 mt-3"> Ingresar Orden</a>
          <div class="box1 col-10 p-3 mt-4">
            
 
@@ -37,12 +37,19 @@
                            </form>
 
                      </td>
-                    {{-- <td><button class="btn btn-danger">Eliminar</button></td> --}}
+                   
                   </tr>
+                 
          @endforeach 
-
+                      
                 </tbody>
               </table>
+
+              <div>
+                <h2>
+                  Total:
+                </h2>
+              </div>
 
          </div>
          <div class="box2">

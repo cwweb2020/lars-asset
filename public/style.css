@@ -5,9 +5,18 @@
           box-sizing: border-box;
 }
 
+._back a {
+  width: 12rem;
+  margin-left: 5%;
+  font-weight: 500;
+  background-color: brown;
+  border: none;
+  padding: 9px 0;
+}
+
 .formdata {
   background-color: rgba(211, 211, 211, 0.226);
-  width: 25rem;
+  width: 28rem;
   padding: 3rem 2rem;
   min-height: 30rem;
   border-radius: 10px;
@@ -19,6 +28,7 @@
   border-left: none;
   border-right: none;
   margin: .5rem 0;
+  padding: 12px 8px;
 }
 
 .formdata textarea {
