@@ -17,7 +17,7 @@
                     <th scope="col">Comentario</th>
                     <th scope="col">Impuesto</th>
                     <th scope="col">Status</th>
-                    <th scope="col" style="padding:0 30px">Fecha</th>
+                    <th scope="col" style="min-width= 92px">Fecha</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -34,7 +34,10 @@
                                @csrf
                                @method('delete')
                             <button type="submit" class="btn btn-danger">Eliminar</button>
-                           </form>
+                           </form>                         
+              
+                         <a href="{{url('/order/'.$order->id)}}" class="btn btn-success mt-2"> Detalle </a>
+                       
 
                      </td>
                    
