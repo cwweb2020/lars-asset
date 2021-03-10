@@ -61,7 +61,13 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order = order::with('products')->find($id); 
+        $products = $order->products;  
+        $total = 0;
+        foreach ($products as $product) {
+            $total += $product->price;
+        } 
+        return view('order.show', compact(['order', 'total']));
     }
 
     /**
