@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PDFController;
+use Illuminate\Routing\Route as RoutingRoute;
+use Illuminate\Routing\RouteUri;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +23,8 @@ Route::get('/', function () {
 });
 
 Route::resource('/order', OrderController::class);
+
+Route::get('/pdf/{id}', [PDFController::class,'PDF'])->name('descargarPDF');
 
 
 

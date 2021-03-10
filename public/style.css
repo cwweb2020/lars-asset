@@ -15,6 +15,7 @@
 }
 
 .formdata {
+  border-top: 5px solid brown;
   background-color: rgba(211, 211, 211, 0.226);
   width: 28rem;
   padding: 3rem 2rem;
@@ -42,5 +43,23 @@
 .formdata button {
   margin-top: 15px;
   border: none;
+}
+
+.separator {
+  opacity: 0;
+}
+
+.botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+}
+
+.botones a {
+  margin: 0 10px;
 }
 /*# sourceMappingURL=style.css.map */

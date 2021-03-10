@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Models\order;
 class OrderController extends Controller
@@ -13,9 +14,9 @@ class OrderController extends Controller
      */
     public function index()
     {   
-        $orders=order::with('products')->orderby('id','desc')->get();
+        $orders=order::with('products')->get();
 
-        // return dd($orders);
+        // ->orderby('id','desc')
         return view('order.index', compact('orders'));
     }
 
@@ -38,6 +39,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        
         $taxes= request('taxes');
         $status= request('status');
         $comment= request('comment');
