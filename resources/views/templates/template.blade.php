@@ -21,5 +21,7 @@
     
    
     <script src={{asset("recursos.js")}}></script>
+
+    @yield('scripts')
 </body>
 </html>
