@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\order;
+use App\Models\product;
+
 class OrderController extends Controller
 {
     /**
@@ -26,7 +28,9 @@ class OrderController extends Controller
      */
     public function create(){
 
-        return view('order.create');
+        $productos = product::all();
+
+        return view('order.create', compact('productos'));
       
     }
 
@@ -41,16 +45,23 @@ class OrderController extends Controller
         $taxes= request('taxes');
         $status= request('status');
         $comment= request('comment');
+        $productos = request('products');
 
-        order::create([
-            'taxes'=> $taxes,
-            'status'=> $status,
-            'comment'=> $comment
-        ]);
-
-      // order::create()->all();
+        $order = new order();
+        $order->taxes = $taxes;
+        $order->status = $status;
+        $order->comment = $comment;        
+        $order->save();
+                
+        $prod = explode(',', $productos);        
+    
+        foreach ($prod as $p ) { 
+        
+            $order->products()->attach(intval($p));
+        }
 
          return redirect()->route('order.index');
+         
     }
 
     /**
