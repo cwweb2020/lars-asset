@@ -4,6 +4,9 @@ namespace App\Observers;
 
 use App\Models\order;
 use App\Models\Log;
+//---------
+use App\Mail\OrderMailable;
+use Illuminate\Support\Facades\Mail;
 
 class OrderObserver
 {
@@ -18,6 +21,10 @@ class OrderObserver
         $log = new Log();
         $log->event = "New Order created";
         $log->save();
+        //.....
+        $correo = new OrderMailable;
+
+        Mail::to('cliente@cliente.com')->send($correo);
     }
 
    
@@ -32,6 +39,10 @@ class OrderObserver
         $log = new Log();
         $log->event = "Order deleted";
         $log->save();
+        //------ 
+        $correo = new OrderMailable;
+
+        Mail::to('cliente@cliente.com')->send($correo);
     }
 
     /**

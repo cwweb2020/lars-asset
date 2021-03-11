@@ -7,7 +7,7 @@
          
 
          <h2 class="text-center my-4 py-4">
-             Ingrese una nueva Orden
+             Crear una nueva Orden
          </h2>
      </div>
      <div class="_back">
@@ -18,7 +18,7 @@
     <form action="{{url('/order')}}" method="POST" class="formdata ms-4">
    
         @csrf    
-         <h3>Ingresar Orden</h3>
+         <h3>Crear Orden</h3>
         <input type="number" name="taxes" required placeholder="Impuestos"> <br>
     
         <input type="number" name="status" required placeholder="Estatus"><br>
@@ -29,7 +29,7 @@
    
        
     <button type="submit" class="btn btn-success">GUARDAR</button>
-              
+
     </form> 
     <div class="productos">
         @foreach ($productos  as $product)
@@ -41,8 +41,7 @@
             
         @endforeach
      </div>  
-
-
+    </form>  
  </section>
    
  @endsection

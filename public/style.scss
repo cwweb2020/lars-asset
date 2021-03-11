@@ -16,6 +16,7 @@
       }
 }
 .formdata{
+    border-top: 5px solid brown;
     background-color: rgba(211, 211, 211, 0.226);
     width: 28rem;
     padding: 3rem 2rem;
@@ -43,8 +44,18 @@
            border: none;
        }
 }
+.separator{
+    opacity: 0;
+}
+.botones{
+    display: flex;
+    align-items: center;
+    height: 10vh;
 
-
+       a{
+           margin: 0 10px;
+       }
+}
 
 
 
